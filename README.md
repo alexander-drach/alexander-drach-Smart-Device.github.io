@@ -1,2 +1,2 @@
-# alexander-drach-Smart-Device.github.io
+# alexander-drach.github.io
 Smart Device
