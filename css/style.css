@@ -863,6 +863,10 @@ template {
   cursor: pointer;
 }
 
+.modal__close-btn.focus-visible:focus {
+  opacity: 0.8;
+}
+
 .modal--responsive .modal__content {
   width: 100%;
 }
@@ -935,9 +939,9 @@ template {
   margin-left: 8px;
 }
 
-input[type=text],
-input[type=tel],
-textarea {
+.form input[type=text],
+.form input[type=tel],
+.form textarea {
   width: 100%;
   position: relative;
   font-size: 16px;
@@ -945,44 +949,52 @@ textarea {
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   color: #f2f5f6;
+  -webkit-transition: outline 0.3s ease;
+  transition: outline 0.3s ease;
 }
 
-input[type=text]::-webkit-input-placeholder,
-input[type=tel]::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+.form input[type=text]::-webkit-input-placeholder,
+.form input[type=tel]::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-input[type=text]::-moz-placeholder,
-input[type=tel]::-moz-placeholder,
-textarea::-moz-placeholder {
+.form input[type=text]::-moz-placeholder,
+.form input[type=tel]::-moz-placeholder,
+.form textarea::-moz-placeholder {
   color: #ffffff;
 }
 
-input[type=text]:-ms-input-placeholder,
-input[type=tel]:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+.form input[type=text]:-ms-input-placeholder,
+.form input[type=tel]:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
   color: #ffffff;
 }
 
-input[type=text]::-ms-input-placeholder,
-input[type=tel]::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
+.form input[type=text]::-ms-input-placeholder,
+.form input[type=tel]::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
   color: #ffffff;
 }
 
-input[type=text]::placeholder,
-input[type=tel]::placeholder,
-textarea::placeholder {
+.form input[type=text]::placeholder,
+.form input[type=tel]::placeholder,
+.form textarea::placeholder {
   color: #ffffff;
 }
 
-input[type=text],
-input[type=tel] {
+.form input[type=text].focus-visible:focus,
+.form input[type=tel].focus-visible:focus,
+.form textarea.focus-visible:focus {
+  outline: 1px solid #026593;
+}
+
+.form input[type=text],
+.form input[type=tel] {
   padding: 15px;
 }
 
-textarea {
+.form textarea {
   padding: 25px 15px;
   resize: none;
   min-height: 155px;
@@ -1014,6 +1026,8 @@ textarea {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .custom-toggle--checkbox .custom-toggle__icon {
@@ -1035,6 +1049,14 @@ textarea {
   background-image: url("../img/sprite/icon-check.svg");
   background-size: 15px;
   background-position: center;
+}
+
+.custom-toggle.focus-visible:focus label {
+  color: rgba(4, 24, 39, 0.5);
+}
+
+.custom-toggle.focus-visible:focus .custom-toggle__icon {
+  border: 1px solid rgba(4, 24, 39, 0.5);
 }
 
 .section h2 {
@@ -1225,7 +1247,7 @@ h2 span:last-child {
   z-index: 1;
 }
 
-.intro__title {
+.intro h1 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 80px;
   font-style: normal;
@@ -1306,7 +1328,7 @@ h2 span:last-child {
   border-left: 5px solid #00b2ff;
 }
 
-.features__item:hover .features__title,
+.features__item:hover .features h3,
 .features__item:hover .features__desc {
   color: #f2f5f6;
 }
@@ -1324,7 +1346,7 @@ h2 span:last-child {
   transition: fill 0.3s ease;
 }
 
-.features__title {
+.features h3 {
   margin-top: 0;
   margin-bottom: 15px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1761,7 +1783,7 @@ h2 span:last-child {
     padding-top: 0;
   }
 
-  textarea {
+  .form textarea {
     padding-top: 33px;
   }
 
@@ -1833,7 +1855,7 @@ h2 span:last-child {
     }
 }
 
-  .intro__title {
+  .intro h1 {
     font-size: 64px;
     letter-spacing: 4.48px;
     margin-bottom: 0;
@@ -1861,7 +1883,7 @@ h2 span:last-child {
     margin-bottom: 10px;
   }
 
-  .features__title {
+  .features h3 {
     margin-bottom: 10px;
   }
 
@@ -2012,7 +2034,7 @@ h2 span:last-child {
     width: 100%;
   }
 
-  textarea {
+  .form textarea {
     padding-top: 25px;
     min-height: 180px;
   }
@@ -2079,7 +2101,7 @@ h2 span:last-child {
     padding: 0 25px;
   }
 
-  .intro__title {
+  .intro h1 {
     font-size: 36px;
     letter-spacing: 2.52px;
     margin-bottom: 7px;
@@ -2128,7 +2150,7 @@ h2 span:last-child {
     height: 30px;
   }
 
-  .features__title {
+  .features h3 {
     font-size: 20px;
     line-height: 140%;
     margin-bottom: 9px;
@@ -2268,6 +2290,24 @@ h2 span:last-child {
     background-color: #00b2ff;
     color: #f2f5f6;
     border: 1px solid #00b2ff;
+  }
+
+  .modal__close-btn:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .form input[type=text]:hover:not(.focus-visible),
+  .form input[type=tel]:hover:not(.focus-visible),
+  .form textarea:hover:not(.focus-visible) {
+    outline: 1px solid #026593;
+  }
+
+  .custom-toggle:hover:not(.focus-visible) label {
+    color: rgba(4, 24, 39, 0.5);
+  }
+
+  .custom-toggle:hover:not(.focus-visible) .custom-toggle__icon {
+    border: 1px solid rgba(4, 24, 39, 0.5);
   }
 
   .header__link:hover:not(.focus-visible) {
