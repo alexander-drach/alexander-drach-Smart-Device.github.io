@@ -9,6 +9,11 @@
   <title>Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -24,7 +29,7 @@
   <div class="wrapper">
     <section class="intro">
       <div class="container">
-        <header class="header">
+        <header class="header" data-header>
           <div class="header__inner">
             <a class="logo logo--header" href="#">
               <svg width="70" height="38">
@@ -48,7 +53,10 @@
                 </li>
               </ul>
             </nav>
-            <button class="hamb" type="button"><span class="visually-hidden">Открыть / Закрыть меню</span></button>
+            <button class="hamb" type="button" data-burger>
+              <span class="visually-hidden">Открыть / Закрыть меню</span>
+              <span class="hamb__line"></span>
+            </button>
           </div><!-- header__inner -->
         </header>
         <div class="intro__inner">
@@ -63,7 +71,7 @@
     <main>
       <section class="adventure">
         <div class="container">
-          <div class="aventure__inner">
+          <div class="adventure__inner">
             <div class="adventure__text">
               <h2>Путешествие на&nbsp;край Земли</h2>
               <div class="adventure__desc">
@@ -84,11 +92,11 @@
                 <source type="image/png" srcset="img/adventure-tablet.png 1x, img/adventure-tablet@2x.png 2x"
                   media="(max-width: 1023px)" />
 
-                <img width="560" height="301" class="services__thumb" src="img/adventure-desktop.png"
-                  srcset="img/adventure-desktop@2x.png" alt="три пингвина на снегу" />
+                <img width="560" height="301" src="img/adventure-desktop.png"
+                  srcset="img/adventure-desktop@2x.png" alt="три пингвина на снегу">
               </picture>
             </div>
-          </div><!-- aventure__inner -->
+          </div><!-- adventure__inner -->
         </div>
       </section><!-- adventure -->
 
@@ -142,41 +150,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-1-mobile.webp 1x, img/cards/card-1-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-1-mobile.webp 1x, img/cards/card-1-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-1-tablet.webp 1x, img/cards/card-1-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-1-tablet.webp 1x, img/cards/card-1-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-1-mobile.png 1x, img/cards/card-1-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-1-mobile.png 1x, img/cards/card-1-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-1-tablet.png 1x, img/cards/card-1-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-1-tablet.png 1x, img/cards/card-1-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-1-desktop.png" srcset="img/cards/card-1-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-1-desktop.png"
+                        srcset="img/cards/card-1-desktop@2x.png 2x" alt="фото круиз Астория">
                     </picture>
                     <h3>Круиз &ldquo;Астория&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Астория&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Аргентина - Фолклендские острова - Антарктида</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Ушуайя</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>11 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>11500</span> $</p>
@@ -191,41 +204,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-1-mobile.webp 1x, img/cards/card-1-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-1-mobile.webp 1x, img/cards/card-1-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-1-tablet.webp 1x, img/cards/card-1-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-1-tablet.webp 1x, img/cards/card-1-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-1-mobile.png 1x, img/cards/card-1-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-1-mobile.png 1x, img/cards/card-1-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-1-tablet.png 1x, img/cards/card-1-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-1-tablet.png 1x, img/cards/card-1-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-1-desktop.png" srcset="img/cards/card-1-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-1-desktop.png"
+                        srcset="img/cards/card-1-desktop@2x.png 2x" alt="фото круиз Элайн">
                     </picture>
-                    <h3>Круиз &ldquo;"Элайн"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Элайн&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Элайн&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Аргентина - Фолклендские острова - Антарктида - Чили</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Буэнос-Айрес</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>20 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>14500</span> $</p>
@@ -240,41 +258,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-3-mobile.webp 1x, img/cards/card-3-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-3-mobile.webp 1x, img/cards/card-3-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-3-tablet.webp 1x, img/cards/card-3-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-3-tablet.webp 1x, img/cards/card-3-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-3-mobile.png 1x, img/cards/card-3-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-3-mobile.png 1x, img/cards/card-3-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-3-tablet.png 1x, img/cards/card-3-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-3-tablet.png 1x, img/cards/card-3-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-3-desktop.png" srcset="img/cards/card-3-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-3-desktop.png"
+                        srcset="img/cards/card-3-desktop@2x.png 2x" alt="фото круиз Атлантис">
                     </picture>
-                    <h3>Круиз &ldquo;"Атлантис"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Атлантис&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Атлантис&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Аргентина - Южная Георгия и Южные Сандвичевы Острова - Антарктида</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Ушуайя</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>15 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>14500</span> $</p>
@@ -289,41 +312,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-4-mobile.webp 1x, img/cards/card-4-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-4-mobile.webp 1x, img/cards/card-4-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-4-tablet.webp 1x, img/cards/card-4-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-4-tablet.webp 1x, img/cards/card-4-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-4-mobile.png 1x, img/cards/card-4-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-4-mobile.png 1x, img/cards/card-4-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-4-tablet.png 1x, img/cards/card-4-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-4-tablet.png 1x, img/cards/card-4-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-4-desktop.png" srcset="img/cards/card-4-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-4-desktop.png"
+                        srcset="img/cards/card-4-desktop@2x.png 2x" alt="фото круиз Одиссей">
                     </picture>
-                    <h3>Круиз &ldquo;"Одиссей"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Одиссей&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Одиссей&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Чили - Антарктида</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Пунта-Аренас</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>13 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>9700</span> $</p>
@@ -338,41 +366,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-5-mobile.webp 1x, img/cards/card-5-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-5-mobile.webp 1x, img/cards/card-5-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-5-tablet.webp 1x, img/cards/card-5-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-5-tablet.webp 1x, img/cards/card-5-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-5-mobile.png 1x, img/cards/card-5-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-5-mobile.png 1x, img/cards/card-5-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-5-tablet.png 1x, img/cards/card-5-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-5-tablet.png 1x, img/cards/card-5-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-5-desktop.png" srcset="img/cards/card-5-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-5-desktop.png"
+                        srcset="img/cards/card-5-desktop@2x.png 2x" alt="Фото круиз Олимпия">
                     </picture>
-                    <h3>Круиз &ldquo;"Олимпия"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Олимпия&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Олимпия&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Аргентина - Фолклендские острова - Южная Георгия - Антарктида</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Ушуайя</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>21 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>18600</span> $</p>
@@ -387,41 +420,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-6-mobile.webp 1x, img/cards/card-6-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-6-mobile.webp 1x, img/cards/card-6-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-6-tablet.webp 1x, img/cards/card-6-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-6-tablet.webp 1x, img/cards/card-6-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-6-mobile.png 1x, img/cards/card-6-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-6-mobile.png 1x, img/cards/card-6-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-6-tablet.png 1x, img/cards/card-6-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-6-tablet.png 1x, img/cards/card-6-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-6-desktop.png" srcset="img/cards/card-6-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-6-desktop.png"
+                        srcset="img/cards/card-6-desktop@2x.png 2x" alt="фото круиз Аврора">
                     </picture>
-                    <h3>Круиз &ldquo;"Аврора"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Аврора&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Аврора&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Аргентина - Антарктида - Чили</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Ушуайя</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>14 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>11700</span> $</p>
@@ -436,41 +474,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-7-mobile.webp 1x, img/cards/card-7-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-7-mobile.webp 1x, img/cards/card-7-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-7-tablet.webp 1x, img/cards/card-7-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-7-tablet.webp 1x, img/cards/card-7-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-7-mobile.png 1x, img/cards/card-7-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-7-mobile.png 1x, img/cards/card-7-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-7-tablet.png 1x, img/cards/card-7-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-7-tablet.png 1x, img/cards/card-7-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-7-desktop.png" srcset="img/cards/card-7-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-7-desktop.png"
+                        srcset="img/cards/card-7-desktop@2x.png 2x" alt="фото круиз Леонор">
                     </picture>
-                    <h3>Круиз &ldquo;"Леонор"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Леонор&rdquo;</h3>
                   </div>
                   <div class="card__detail">
                     <h3>Круиз &ldquo;Леонор&rdquo;</h3>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Чили - Южная Георгия - Антарктида - Аргентина</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Пунта-Аренас</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>17 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>12500</span> $</p>
@@ -485,41 +528,46 @@
                 <article class="card">
                   <div class="card__preview">
                     <picture>
-                      <source type="image/webp" srcset="img/cards/card-8-mobile.webp 1x, img/cards/card-8-mobile@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-8-mobile.webp 1x, img/cards/card-8-mobile@2x.webp 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/webp" srcset="img/cards/card-8-tablet.webp 1x, img/cards/card-8-tablet@2x.webp 2x"
+                      <source type="image/webp"
+                        srcset="img/cards/card-8-tablet.webp 1x, img/cards/card-8-tablet@2x.webp 2x"
                         media="(max-width: 1023px)" />
 
-                      <source type="image/png" srcset="img/cards/card-8-mobile.png 1x, img/cards/card-8-mobile@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-8-mobile.png 1x, img/cards/card-8-mobile@2x.png 2x"
                         media="(max-width: 767px)" />
-                      <source type="image/png" srcset="img/cards/card-8-tablet.png 1x, img/cards/card-8-tablet@2x.png 2x"
+                      <source type="image/png"
+                        srcset="img/cards/card-8-tablet.png 1x, img/cards/card-8-tablet@2x.png 2x"
                         media="(max-width: 1023px)" />
 
-                      <img width="260" height="386" class="card__thumb" src="img/cards/card-8-desktop.png" srcset="img/cards/card-8-desktop@2x.png 2x" alt="увеличенное изображение платы" />
+                      <img width="260" height="386" class="card__thumb" src="img/cards/card-8-desktop.png"
+                        srcset="img/cards/card-8-desktop@2x.png 2x" alt="фото круиз Минион 1">
                     </picture>
-                    <h3>Круиз &ldquo;"Минион - 1"&rdquo;</h3>
+                    <h3>Круиз &ldquo;Минион&nbsp;-&nbsp;1&rdquo;</h3>
                   </div>
                   <div class="card__detail">
-                    <h3>Круиз &ldquo;Минион - 1&rdquo;</h3>
-                    <div class="card__chapter">
+                    <h3>Круиз &ldquo;Минион&nbsp;-&nbsp;1&rdquo;</h3>
+                    <div class="card__chapter card__chapter--rout">
                       <h4>Маршрут</h4>
                       <div class="card__info">
                         <p>Аргентина - Антарктида</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--port">
                       <h4>Порт отправления</h4>
                       <div class="card__info">
                         <p>Ушуайя</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--duration">
                       <h4>Продолжительность</h4>
                       <div class="card__info">
                         <p>11 дней</p>
                       </div>
                     </div>
-                    <div class="card__chapter">
+                    <div class="card__chapter card__chapter--price">
                       <h4>Цена</h4>
                       <div class="card__info">
                         <p>от <span>12300</span> $</p>
@@ -543,33 +591,37 @@
                 <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
               </div>
             </div>
-            <div class="form">
+            <div class="form" data-form-validate data-callback="base" data-parent-validate="base">
               <div class="form__desc">
                 <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</p>
               </div>
-              <form>
-                <div class="custom-input" data-validate-type="text" data-limitation="name">
+              <form method="post" action="https://echo.htmlacademy.ru" name="bookingform">
+                <div class="custom-input" data-validate-type="text" data-limitation="name" data-on-input-validate data-required data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно">
                   <label class="visually-hidden" for="name">Имя</label>
                   <input id="name" name="name" type="text" placeholder="Имя" required minlength="2">
                 </div>
 
-                <div class="custom-input" data-validate-type="phone">
+                <div class="custom-input" data-validate-type="phone" data-on-input-validate data-required data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно">
                   <label class="visually-hidden" for="tel">Телефон</label>
                   <input id="tel" name="tel" type="tel" placeholder="Телефон">
                 </div>
 
-                <div class="custom-input" data-validate-type="email">
+                <div class="custom-input" data-validate-type="email" data-on-input-validate data-required data-message-base="Поле обязательно к заполнению" data-message-success="Поле заполнено верно">
                   <label class="visually-hidden" for="tel">email</label>
                   <input id="email" name="email" type="email" placeholder="Email">
                 </div>
 
-                <div class="custom-toggle custom-toggle--checkbox">
-                  <input id="agree" type="checkbox" name="agree">
-                  <span class="custom-toggle__icon"></span>
+                <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
+                  <input id="agree" type="checkbox" name="agree" required>
+                  <span class="custom-toggle__icon">
+                    <svg width="10" height="6">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
                   <label for="agree">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
                 </div>
 
-                <button class="btn btn-white booking__btn">Оставить заявку</button>
+                <button class="btn btn-white booking__btn" type="submit">Оставить заявку</button>
               </form>
             </div>
           </div><!-- booking__inner -->
@@ -580,14 +632,28 @@
           <h2 class="visually-hidden">Контакты</h2>
           <div class="contact__inner">
             <div class="contact__map">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A79da39dd02fb133d21e20158e83d913a5805606b76a1a7cbd9876688bfb6f206&amp;source=constructor" width="100%" height="306" frameborder="0"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d499.6502692931014!2d30.324110478654053!3d59.938761448425666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!3m2!1d59.9387165!2d30.3230474!4m0!5e0!3m2!1sru!2sru!4v1697787627424!5m2!1sru!2sru"
+                width="560" height="306" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="contact__content">
               <div class="contact__desc">
-                <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+                <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам
+                  все расскажем.</p>
               </div>
-              <address class="contact__address">г. Санкт Петербург, ул. Большая Конюшенная, 19/8</address>
-              <a class="contact__phone" href="tel:88002000000">8-800-200-00-00</a>
+              <address class="contact__address">
+                <svg class="contact-icon" width="18" height="22">
+                  <use xlink:href="img/sprite.svg#icon-geo"></use>
+                </svg>
+                г. Санкт Петербург, ул. Большая Конюшенная, 19/8
+              </address>
+              <a class="contact__phone" href="tel:88002000000">
+                <svg class="contact-icon" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+                8-800-200-00-00
+              </a>
             </div>
           </div>
         </div>
@@ -616,17 +682,17 @@
             </li>
           </ul>
           <div class="social">
-            <a class="social__item" href="#">
+            <a class="social__item social__item--ok" href="#">
               <svg width="12" height="20">
                 <use xlink:href="img/sprite.svg#icon-social-ok"></use>
               </svg>
             </a>
-            <a class="social__item" href="#">
+            <a class="social__item social__item--yandex" href="#">
               <svg width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-social-yandex"></use>
               </svg>
             </a>
-            <a class="social__item" href="#">
+            <a class="social__item social__item--reddit" href="#">
               <svg width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-social-reddit"></use>
               </svg>
