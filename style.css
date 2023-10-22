@@ -32,8 +32,20 @@ p:last-child {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media (max-width: 1024px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 640px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .projects {
@@ -53,6 +65,14 @@ p:last-child {
   margin: 0;
 
   list-style-type: none;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .projects__item {
@@ -65,26 +85,42 @@ p:last-child {
   box-shadow: 1px 1px 15px lightgray;
 }
 
-.projects__title {
-
-}
+.projects__title {}
 
 .projects__desc {
   margin-bottom: 30px;
 }
 
 .projects__link {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 15px;
+}
+
+.projects__link::before {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 18px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.projects__link--network::before {
+  background-image: url("./images/icon-network.png");
+}
+
+.projects__link--github::before {
+  background-image: url("./images/icon-github.png");
 }
 
 .projects__link:last-child {
   margin-bottom: 0;
 }
 
-.projects__link:hover {
-
-}
+.projects__link:hover {}
 
 .skills {
   display: flex;
