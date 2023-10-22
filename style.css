@@ -88,13 +88,17 @@ p:last-child {
 .projects__title {}
 
 .projects__desc {
-  margin-bottom: 30px;
+  margin-bottom: auto;
 }
 
 .projects__link {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+}
+
+.projects__link:first-of-type {
+  margin-top: 15px;
 }
 
 .projects__link::before {
@@ -128,7 +132,7 @@ p:last-child {
   align-items: center;
 
   padding-left: 0;
-  margin: auto 0 0 0;
+  margin: 15px 0 0 0;
   list-style-type: none;
 }
 
