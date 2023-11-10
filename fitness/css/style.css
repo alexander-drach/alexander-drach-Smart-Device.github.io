@@ -3662,6 +3662,10 @@ button,
     padding: 46px 44px 47px 45px;
   }
 
+  .promo__text {
+    margin-bottom: 6px;
+  }
+
   .reviews {
     padding-top: 30px;
     padding-bottom: 99px;
@@ -4105,6 +4109,7 @@ button,
   }
 
   .reviews {
+    padding-top: 32px;
     padding-bottom: 70px;
   }
 
